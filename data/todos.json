@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Create jasvascript course",
+    "details": "Create a full stack javascript course"
+  },
+  {
+    "title": "Take kids to school camp",
+    "details": "Sign of forms"
+  },
+  {
+    "title": "Ensure house is clean",
+    "details": ["vaccum", "wash dishes"]
+  }
+]

@@ -7,8 +7,10 @@ const colors = require("colors");
 dotenv.config({ path: "./config/config.env" });
 
 // Load Models
-const Todos = require("./models/Todo");
 const Todo = require("./models/Todo");
+
+// Connect to database
+mongoose.connect(process.env.MONGO_URI);
 
 // Read Json files
 const todos = JSON.parse(

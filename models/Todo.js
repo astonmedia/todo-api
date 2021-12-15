@@ -10,7 +10,7 @@ const TodoSchema = new mongoose.Schema({
   },
   slug: String,
   details: {
-    type: String,
+    type: Array,
     trim: true,
   },
   completed: {
