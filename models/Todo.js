@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
-const { default: slugify } = require("slugify");
-const sulgify = require("slugify");
+const slugify = require("slugify");
 
 const TodoSchema = new mongoose.Schema({
   title: {
@@ -13,6 +12,10 @@ const TodoSchema = new mongoose.Schema({
   details: {
     type: String,
     trim: true,
+  },
+  completed: {
+    type: Boolean,
+    default: false,
   },
   createdAt: {
     type: Date,

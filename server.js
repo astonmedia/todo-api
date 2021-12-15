@@ -6,6 +6,7 @@ const morgan = require("morgan");
 
 // Custom Packages
 const connectDB = require("./config/db");
+const todoRoutes = require("./routes/todos");
 // Load config env variables
 dotenv.config({ path: path.resolve(__dirname, "./config/config.env") });
 
@@ -20,6 +21,8 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("tiny"));
 }
 
+// Mount Routers to URLS
+app.use("/api/v1/todos", todoRoutes);
 // Start server
 const server = async () => {
   try {
