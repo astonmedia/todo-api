@@ -6,11 +6,12 @@ const TodoSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please ensure a todo has a title"],
     trim: true,
+    unique: [true, "A resource already exists with that title"],
     maxlength: [100, "title cannot be more than 100 characters"],
   },
   slug: String,
   details: {
-    type: Array,
+    type: [String],
     trim: true,
   },
   completed: {
