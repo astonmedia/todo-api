@@ -4,9 +4,9 @@ const slugify = require("slugify");
 const TodoSchema = new mongoose.Schema({
   title: {
     type: String,
+    unique: true,
     required: [true, "Please ensure a todo has a title"],
     trim: true,
-    unique: [true, "A resource already exists with that title"],
     maxlength: [100, "title cannot be more than 100 characters"],
   },
   slug: String,
