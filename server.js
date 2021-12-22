@@ -7,6 +7,8 @@ const morgan = require("morgan");
 // Custom Packages
 const connectDB = require("./config/db");
 const todoRoutes = require("./routes/todos");
+const authRoutes = require("./routes/auth");
+const userRoutes = require("./routes/users");
 const errorHandler = require("./middleware/error");
 // Load config env variables
 dotenv.config({ path: path.resolve(__dirname, "./config/config.env") });
@@ -24,6 +26,8 @@ if (process.env.NODE_ENV === "development") {
 
 // Mount Routers to URLS
 app.use("/api/v1/todos", todoRoutes);
+app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/users", userRoutes);
 // Start server
 const server = async () => {
   try {
@@ -46,7 +50,7 @@ const server = async () => {
 app.use(errorHandler);
 // Start the application
 server();
-// Handle unhandled promise rejections
+// Handle unhandled promise rejectionsjju
 process.on("unhandledRejection", (err, promise) => {
   console.log(`Error: ${err.message}`.red);
   // Close server and exit process
