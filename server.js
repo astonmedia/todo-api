@@ -7,6 +7,7 @@ const morgan = require("morgan");
 // Custom Packages
 const connectDB = require("./config/db");
 const todoRoutes = require("./routes/todos");
+const errorHandler = require("./middleware/error");
 // Load config env variables
 dotenv.config({ path: path.resolve(__dirname, "./config/config.env") });
 
@@ -41,6 +42,8 @@ const server = async () => {
     process.exit(1);
   }
 };
+// Custom Error Handler
+app.use(errorHandler);
 // Start the application
 server();
 // Handle unhandled promise rejections
