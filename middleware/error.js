@@ -1,10 +1,11 @@
 const ErrorResponse = require("../utils/errorResponse");
+const colors = require("colors");
 
 const errorHandler = (err, req, res, next) => {
   let error = { ...err };
   error.message = err.message;
   // Log to console for development
-  console.log(error.stack.red);
+  console.log(error.stack);
   // Mongoose bad object ID
   if (err.name === "CastError") {
     const message = "Resource not found!";
