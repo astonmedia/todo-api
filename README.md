@@ -10,38 +10,38 @@ Create the backend for a todo website. The frontend/UI will be built using Vuejs
   - [] Limit number of results
   - [] Filter by fields
 - [x] Get Single todo
-- Create new todo
-  - Authenticated users only
-  - Field validation via mongoose
-- Update todo
-  - Owner Only
-  - Validation on update
-- Delete todo
-  - Owner only
-- Calculate number of todos
+- [x] Create new todo
+  - [] Authenticated users only
+  - [x] Field validation via mongoose
+- [x] Update todo
+  - [] Owner Only
+  - [x] Validation on update
+- [x] Delete todo
+  - [] Owner only
+- [x] Calculate number of todos
 
 ### Users & Authentication
 
-- Authentication will be using JWT/cookies
-  - JWT and cookie should expire in 30 days
-- User registration
-  - Register user
-  - Once registered, a token will be sent along with a cookie
-  - Passwords must be hashed
-- User Logout
-  - Cookie will be sent to set token = none
-- Get User
-  - Route to get the currently logged in user (via token)
-- Password Reset (Lost password)
-  - User can request to reset password
-  - A hashed token will be emailed to the users registered email address
-  - A put request can me made to the regenerated url to reset password
-  - The token will expire after 10 minutes
-- Update user info
-  - Authenticated user only
-  - Seperate route to updated password
-- User CRUD
-  - Authenticated user only
+- [x] Authentication will be using JWT/cookies
+  - [x] JWT and cookie should expire in 30 days
+- [x] User registration
+  - [x] Register user
+  - [x] Once registered, a token will be sent along with a cookie
+  - [x] Passwords must be hashed
+- [x] User Logout
+  - [x] Cookie will be sent to set token = none
+- [] Get User
+  - [] Route to get the currently logged in user (via token)
+- [] Password Reset (Lost password)
+  - [] User can request to reset password
+  - [] A hashed token will be emailed to the users registered email address
+  - [] A put request can me made to the regenerated url to reset password
+  - [] The token will expire after 10 minutes
+- [] Update user info
+  - [] Authenticated user only
+  - [] Seperate route to updated password
+- [] User CRUD
+  - [] Authenticated user only
 
 ### Security
 
