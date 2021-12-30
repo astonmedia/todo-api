@@ -1,17 +1,14 @@
 const Todo = require("../models/Todo");
 const ErrorResponse = require("../utils/errorResponse");
 const asyncHandler = require("../middleware/async");
+const advancedResults = require("../middleware/advancedResults");
 
 // @desc Get all todos
 // @route GET /api/v1/todos
 // @access Public
 exports.getTodos = asyncHandler(async (req, res, next) => {
-  const todos = await Todo.find();
-  res.status(200).json({
-    success: true,
-    count: todos.length,
-    data: todos,
-  });
+  // Send Json Response
+  res.status(200).json(res.advancedResults);
 });
 
 // @desc Get single todo by ID
