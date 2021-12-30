@@ -9,7 +9,7 @@ exports.getTodos = asyncHandler(async (req, res, next) => {
   const todos = await Todo.find();
   res.status(200).json({
     success: true,
-    count: todos.count,
+    count: todos.length,
     data: todos,
   });
 });
@@ -32,11 +32,10 @@ exports.getTodo = asyncHandler(async (req, res, next) => {
 });
 
 // @desc Create new todo
-// @route DELETE /api/v1/todos/id
+// @route POST /api/v1/todos/id
 // @access Public
 exports.createTodo = asyncHandler(async (req, res, next) => {
-  const { title, details } = req.body;
-  const todo = await Todo.create({ title, details });
+  const todo = await Todo.create(req.body);
   res.status(201).json({
     success: true,
     data: todo,
