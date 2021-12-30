@@ -4,12 +4,12 @@ Create the backend for a todo website. The frontend/UI will be built using Vuejs
 
 ### Todos
 
-- List all todos in the database
-  - Pagination
-  - Select specific fields in result
-  - Limit number of results
-  - Filter by fields
-- Get Single todo
+- [] List all todos in the database
+  - [] Pagination
+  - [] Select specific fields in result
+  - [] Limit number of results
+  - [] Filter by fields
+- [x] Get Single todo
 - Create new todo
   - Authenticated users only
   - Field validation via mongoose
