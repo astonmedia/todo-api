@@ -1,0 +1,21 @@
+[
+  {
+    "id": "61d0af954eb3ab094c9de0ba",
+    "name": "Ricky Aston",
+    "email": "ricky.aston@hotmail.com",
+    "password": "password",
+    "role": "admin"
+  },
+  {
+    "id": "61d0b04dc821c7939b532ed0",
+    "name": "Mason Aston",
+    "email": "mason.aston@hotmail.com",
+    "password": "password"
+  },
+  {
+    "id": "61d0b06aeaf563393705f13e",
+    "name": "Harper Aston",
+    "email": "harper.aston@hotmail.com",
+    "password": "password"
+  }
+]

@@ -1,14 +1,17 @@
 [
   {
     "title": "Create jasvascript course",
-    "details": "Create a full stack javascript course"
+    "details": "Create a full stack javascript course",
+    "user": "61d0af954eb3ab094c9de0ba"
   },
   {
     "title": "Take kids to school camp",
-    "details": "Sign of forms"
+    "details": "Sign of forms",
+    "user": "61d0b04dc821c7939b532ed0"
   },
   {
     "title": "Ensure house is clean",
-    "details": ["vaccum", "wash dishes"]
+    "details": ["vaccum", "wash dishes"],
+    "user": "61d0b06aeaf563393705f13e"
   }
 ]
