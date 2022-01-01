@@ -14,7 +14,7 @@ const {
 
 router.use(protect);
 
-router.route("/").get(advancedResults(Todo), getTodos).post(createTodo);
+router.route("/").get(getTodos).post(createTodo);
 router.route("/:id").get(getTodo).put(updateTodo).delete(deleteTodo);
 
 module.exports = router;
